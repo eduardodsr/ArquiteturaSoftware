@@ -115,6 +115,8 @@
 
 <img src="https://i.imgur.com/NIWGqJ0.png" width="700px" />
 
+* **OBS:** **App** - é a Aplicação
+
 ## Material Complementar (Pesquisas na Internet)
 Segue abaixo as minhas pesquisas sobre os Sistemas Monolíticos.
 
@@ -278,9 +280,39 @@ Dessa forma, a adoção dessa arquitetura não deve ser realizada simplesmente p
 * **Fonte:**
 * `Link:` https://martinfowler.com/articles/microservices.html
 
+- [x] 4. Distribuição de responsabilidades
+
+### Distribuição de responsabilidades
+
+<img src="https://i.imgur.com/1LqD9wY.png" raw="true" alt="imagem" width="800px" />
+
+Pensar no Desenvolvimento do Software na distribuição de responsabilidades (delegação das responsabilidades) das App (Aplicações). Sua App servindo somente como Aplicação.
+
+<img src="https://i.imgur.com/9ZpDcoa.png" raw="true" alt="imagem" width="800px" />
+
+Responsabilidades separadas, criadas e removidas a qualquer momento. Utilizar aplicações distribuidas, ou seja, esse tipo de aplicação é monolítica.
+
+Más é possível trabalhar com Aplicações Monolítica com Escala Horizontal. Utilizar num formato Horizontal.
+
+#### Escala Horizontal - Aplicação Monolítica
+
+* Ter imagens / containers
+    * Amazon
+    * Docker
+* Ser facilmente reconstruída
+* Ter sua responsabilidades, incluídos assets, etc.
+* Sim, aplicações monolíticas podem ser totalmente escaláveis
+
+## ATENÇÃO (Alguns pontos para analisar)
+### Quando as Aplicações Monolítica podem parar de valer a pena?
+
+* Times grandes
+* Necessidade de escalar todo sistema pelo fato de uma área em específico esteja com pico de utilização
+* Risco de um deploy completo começa a se elevar
+    * Risco deploy ficar perigoso
+* Necessidade de utilizar tecnologias diferentes
 
 
-- [ ] 4. Distribuição de responsabilidades
 - [ ] 5. Introdução aos microsserviços
 - [ ] 6. Orientação a negócios
 - [ ] 7. Outras características
