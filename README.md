@@ -22,6 +22,63 @@
 * Tipos de escalonamentos
 * BFF
 
+## CONTEÚDO
+
+### FUNDAMENTOS
+- [x] 1. Introdução a arquitetura de software
+
+* **1.1 O que é Arquitetura?**
+    * "Organização de um sistema, contemplando seus componentes, os relacionamentos entre estes e com o ambiente, e os princípios que governam seu projeto e evolução". (ISO 42010:2011)
+
+* **1.2 Pilares**
+    * Organização de um sistema
+    * Componentização
+    * Relacionamento entre sistemas
+    * Governança (Infra, Time e Arquitetura)
+    * Ambiente (padronização)
+    * Projeto
+    * Projeção
+    * Cultura
+
+* **1.3 Frameworks**
+    * **Frameworks** são ferramentas e métodos que nos ajudam a focar essencialmente no objetivo final.
+    * Frameworks nos ajudam a definir um padrão de trabalho.
+
+    * 1.3.1 **TOGAF** (The TOGAF Standard - Version 9.2)
+        * **Framework conceitual:**
+            * Definição dos processos de arquitetura
+            * +900 páginas
+            * Conceitos e nomenclaturas
+
+        * **Visão geral de tipos de arquiteturas:**
+            * Negócio
+            * Sistemas de Informação
+            * Tecnologia
+            * Planos de migração
+
+    * 1.3.2 **ISO/IEC/IEEE 42010** - Systems and software engineering — Architecture description
+        * **Architecture description**
+            * Lançado em 2001 pela ISO
+            * Mais simplificado em relação as 900 páginas do TOGAF
+            * Formalizada os fundamentos da área de arquitetura de software.
+        
+
+- [ ] 2. Momentos da arquitetura na Historia
+- [ ] 3. Introdução a escalabilidade e sistemas monolíticos
+- [ ] 4. Distribuição de responsabilidades
+- [ ] 5. Introdução aos microsserviços
+- [ ] 6. Orientação a negócios
+- [ ] 7. Outras características
+- [ ] 8. API Gateway
+- [ ] 9. Service Discovery
+- [ ] 10. Comunicação entre microsserviços
+- [ ] 11. Exemplo do RabbitMQ
+- [ ] 12. Dupla latência
+- [ ] 13. Backend for Frontend
+
+### DESAFIOS
+
+
 ## Microsserviços
 * Principais conceitos
 * Vantagens e Desvantagens
