@@ -62,8 +62,33 @@
             * Mais simplificado em relação as 900 páginas do TOGAF
             * Formalizada os fundamentos da área de arquitetura de software.
         
+- [x] 2. Momentos da arquitetura na História
 
-- [ ] 2. Momentos da arquitetura na Historia
+* **Modelo Tradicional**
+    * **Metodologias:** Waterfall - Modelo Cascata
+    * **Tipos de aplicação:** Aplicações Monolíticas
+    * **Infraestrutura:** Infraestrutura on-premise (Infra dentro da própria empresa)
+
+* **Modelo Atual**
+    * **Metodologias:** Agile
+    * **Tipos de aplicação:** Multi-tier architecture (softwares distribuidos que se comunicam entre si)
+    * **Infraestrutura:** Virtualização
+
+* **Modelo Emergente**
+    * **Metodologias:** DevOps / Full Cycle 
+        * Desenvolvedor Full Cycle, ele consegue fazer uma tarefa até o final. 
+        * Resumindo, um profissional Full Cycle deve entender e realizar a operação de um fluxo completo de desenvolvimento. Dos commits iniciais até a produção e monitoramento.
+        * `Link:` https://fullcycle.com.br/tudo-que-voce-precisa-saber-sobre-full-cycle-development/
+    * **Tipos de aplicação:** Aplicações em Microserviços
+    * **Infraestrutura:** Containers [Docker / Kubernetes]
+
+* **Modelo Futuro**
+    * **Metodologias:** NoOps
+    * **Tipos de aplicação:** Serverless Applications
+        * Conjuntos de funções que as empresas pagam pelo acesso
+        * Ex: Amazon Web Services; Google Cloud
+    * **Infraestrutura:** Public Cloud
+
 - [ ] 3. Introdução a escalabilidade e sistemas monolíticos
 - [ ] 4. Distribuição de responsabilidades
 - [ ] 5. Introdução aos microsserviços
