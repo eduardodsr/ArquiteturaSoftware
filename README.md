@@ -91,33 +91,33 @@
 
 - [x] 3. Introdução a escalabilidade e sistemas monolíticos
 
-## Sistemas Monolíticos
+### Sistemas Monolíticos
 
 <img src="https://i.imgur.com/ZiER4mV.png" width="800px" />
 
-### Sistemas Monolíticos
+#### Sistemas Monolíticos
 * Não é crime usar um sistema monolítico
 * Na maioria dos casos vai atender
 * Menos complexidade na maioria dos casos
 * Sistema monolítico é Vida!
 * Não é crime usar um sistema monolítico
 
-## Escalabilidade
+#### Escalabilidade
 
-### Escalando o software - Escala Vertical X Escala Horizontal
+#### Escalando o software - Escala Vertical X Escala Horizontal
 
 * **Escala Vertical** - + recursos computacionais (uma única maquina)
 * **Escala Horizontal** - + App (várias maquinas pequenas - Balancer)
 
 <img src="https://i.imgur.com/4xvZbvz.png" width="670px" />
 
-### Detalhe sobre a Arquitetura da Aplicação
+#### Detalhe sobre a Arquitetura da Aplicação
 
 <img src="https://i.imgur.com/NIWGqJ0.png" width="700px" />
 
 * **OBS:** **App** - é a Aplicação
 
-## Material Complementar (Pesquisas na Internet)
+### Material Complementar
 Segue abaixo as minhas pesquisas sobre os Sistemas Monolíticos.
 
 ## Sistemas Monolíticos
@@ -133,9 +133,9 @@ Não há nada de errado. Na maioria das vezes, usaremos esse sistema e raramente
 
 Os **sistemas monolíticos** possuem algumas características que não são, necessariamente ruins, porém, dependendo do contexto em que você estiver, sem dúvidas você poderá ter diversos tipos de desafios. Por esse motivo que muitas pessoas estão optando em utilizar outras abordagens, incluindo a abordagem baseada na arquitetura de microsserviços.
 
-## Características de Sistemas Monolíticos
+### Características de Sistemas Monolíticos
 
-### Escalabilidade 
+#### Escalabilidade 
 **Escalabilidade** – no sistema monolítico sempre que houver a necessidade de escalar determinada funcionalidade, temos que duplicar o sistema inteiro, mesmo que somente uma funcionalidade necessite de mais recursos. Isso acaba gerando um custo muito grande e desnecessário.
 
 **Exemplo:** o sistema está funcionando corretamente, de repente percebemos que ela começa a ter picos de acesso. O primeiro passo é aumentar a capacidade o servidor, porém, mesmo assim ocorrem quedas. Para resolver isso, colocamos um load balancer e atrás dele, colocamos duas máquinas rodando. Conforme as pessoas acessam, há a distribuição nessas máquinas. De acordo com a necessidade, vamos criando mais máquinas. Até aí, tudo bem, não há problemas. Mas veja, cada vez que escalamos o sistema, temos que gerar uma cópia do sistema inteiro.
@@ -143,28 +143,28 @@ Dependendo do contexto, isso é muito ruim e muitas pessoas estão tentando outr
 
 **Um exemplo é um e-commerce**: Verificamos que o sistema está tendo muitos acessos, mas na verdade 95% dos acessos as pessoas só estão navegando no site e somente 5% efetivamente comprando. Nesse caso, no **sistema monolítico**, duplicando todo o sistema, ficamos com a área de vendas ociosa. Isso é um gasto desnecessário.
 
-### Flexibilidade
+#### Flexibilidade
 **Flexibilidade** – o sistema monolítico **NORMALMENTE** não permite que se desenvolva aplicações em linguagens diferentes. Se desenvolvemos o sistema em Ruby e por algum motivo queremos desenvolver uma aplicação em Go, por exemplo, não é possível. Isso gera uma grande dificuldade. Nesses casos, acabamos desenvolvendo um sistema em paralelo para resolver a questão.
 Outro caso é quando o sistema cresce muito, e todas as vezes que criamos novas funcionalidades, para realizar os testes dessa nova funcionalidade, temos que rodar os testes no sistema todo, gerando uma grande complexidade e trabalho.
 
-### Sistema Único
+#### Sistema Único
 **Sistema Único** – quando um sistema acaba crescendo, normalmente mais desenvolvedores são contratados e quanto mais desenvolvedores, maiores são os desafios para gerenciar pull requests, funcionalidades, conflitos, etc; uma vez que tudo acontece na mesma base do código.
 
-### Tolerância a falhas
+#### Tolerância a falhas
 **Tolerância a falhas**: Podemos dizer que um sistema monolítico é intolerante a falhas. Qualquer deslize pode ocasionar a queda de todo o sistema.
 
-### Conclusão dos Sistemas Monolíticos
+#### Conclusão dos Sistemas Monolíticos
 Portanto, de qualquer forma, é importante ressaltar que na maioria das vezes, **sistemas monolíticos** são mais do que suficientes para dar conta do recado. De forma geral são mais simples de administrar, comunicar e integrar. Logo, é importante deixar claro que não há nada de errado trabalhar com sistemas monolíticos.
 
 ## Microsserviços
 
-### Conceitos e Vantagens
+#### Conceitos e Vantagens
 Antes de iniciarmos o assunto sobre microsserviços, precisamos definir alguns detalhes para não termos qualquer tipo de confusão com termos semelhantes, como **SOA (Arquitetura Orientada a Serviço)**.
 
-### O que é um serviço?
+#### O que é um serviço?
 Um **serviço** disponibiliza a informação, realiza transações, resolve problemas de negócio, independe da tecnologia ou protocolo que está sendo utilizado e também pode estabelecer comunicação com diversos clientes.
 
-### SOA (Service Oriented Architecture)
+#### SOA (Service Oriented Architecture)
 O **SOA** é uma **Arquitetura Orientada a Serviços** que visa a reutilização de sistemas evitando assim o grande retrabalho, uma vez que corporações muitas vezes acabavam repetindo funcionalidades e funções entre seus sistemas. 
 
 Normalmente utiliza uma camada chamada **ESB – Enterprise Service Bus**, que trabalha como interface de conexão entre os serviços. É importante ressaltar que é muito comum nessa arquitetura que os serviços compartilhem o mesmo banco de dados.
@@ -173,10 +173,10 @@ Como neste tipo de aplicação todo o sistema depende do ESB, se houver uma falh
 <img src="https://fullcycle.com.br/wp-content/uploads/2019/08/image-42.png" raw="true" alt="imagem" width="400px" />
 
 
-### OBS:
+#### OBS:
 É importante ressaltar que quando falamos em Microsserviços, **não estamos falando em SOA**.
 
-### Conceitos importantes sobre Microsserviços
+#### Conceitos importantes sobre Microsserviços
 
 **Sistemas Independentes** – Tratando-se de microsserviços, os sistemas precisam ser independentes. Esse serviço tem uma função única e compartilha algumas regras de negócios, que poderá ser utilizado em outros sistemas.
 Cada serviço trabalha independente para que o sistema, como um todo, possa funcionar corretamente.
@@ -193,14 +193,14 @@ Sempre que pensamos em microsserviços, devemos pensar em granularidade. São di
 
 <img src="https://fullcycle.com.br/wp-content/uploads/2019/08/image-43.png" raw="true" alt="imagem" width="400px" />
 
-### Comunicação Assíncrona vs Síncrona
+#### Comunicação Assíncrona vs Síncrona
 Anteriormente, falamos que os microsserviços são independentes e trabalham com banco de dados diferentes. Entretanto, há situações em que um microsserviço depende de outro microsserviço. Isso significa que muitas vezes um microsserviço precisa estabelecer comunicação para que ele consiga realizar um determinado processamento de dados para retornar o resultado para o cliente dele.
 
 No caso de **comunicação síncronoa**, quando uma solicitação é realizada, espera-se o resultado de forma imediata; por exemplo: se estivermos realizando uma requisição HTTP, esperamos que a resposta (response) já seja o resultado esperado referente a aquela requisição.
 
 No caso de **comunicação assíncrona**, quando uma solicitação é realizada, não é esperado a resposta de forma imediata. Normalmente a request vai para uma fila de processamento e seu resultado pode demorar alguns minutos ou até mesmo dias para ser entregue.
 
-### Fallback
+#### Fallback
 Quando o microsserviço faz a solicitação, ele precisa saber que o outro microsserviço irá demorar para devolver o resultado. Nesse momento é necessário ter uma estratégia de fallback para saber o que fazer se os dados não forem entregues no tempo esperado. 
 
 Quais decisões tomar: tento depois? Quando receber os dados, o que fazer? Ou, consigo fazer algo se não receber os dados?
@@ -208,7 +208,7 @@ Quais decisões tomar: tento depois? Quando receber os dados, o que fazer? Ou, c
 O nível de complexidade é muito alto. Não há uma regra geral para trabalhar com microsserviços. Cada empresa, cada negócio, tem a sua necessidade e os conceitos se aplicam a todas as necessidades.
 Quando falamos que o microsserviço tem que ser independente, é porque se ele não receber o retorno de outro microsserviço, é preciso ter outra solução para saber o que fazer, nem que seja, esperar um dia para aguardar o retorno do outro microsserviço.
 
-### Vantagens dos Microsserviços
+#### Vantagens dos Microsserviços
 
 #### Tolerância a falhas
 Um dos **pontos principais em arquiteturas baseadas em microsserviços** é a *tolerância a falhas*.
@@ -217,7 +217,7 @@ Sempre que criamos uma arquitetura baseada em microsserviços, partimos do princ
 **Exemplo:** Acessamos o Facebook e o messenger está com problemas no chat. Se fosse um monolítico, possivelmente todo o Facebook cairia. Trabalhando com microsserviços, simplesmente não exibimos o chat que está com problemas ou informamos que está temporariamente fora e os outros recursos da plataforma continuam funcionando.
 Trabalhando dessa forma, temos problemas localizados de falhas, mas raramente, tudo falhará ao mesmo tempo. Temos que diminuir o nível daquela funcionalidade com problema, para garantir que todo o resto continue funcionando.
 
-### Principais Características
+#### Principais Características
 
 **Componentização via serviços** – em cada componente do negócio, cada produto normalmente é um serviço.
 
@@ -237,7 +237,7 @@ Trabalhando dessa forma, temos problemas localizados de falhas, mas raramente, t
 
 **Automação de infraestrutura** – o deploy de um microsserviço deve ser rápido e cada um tem sua própria forma de realizá-lo, apesar que a tendência hoje seja uma padronização.
 
-### CI e CD 
+#### CI e CD 
 
 Normalmente processos de **CI e CD** são muito comuns no processo de testes e entrega.
 
@@ -245,7 +245,7 @@ Normalmente processos de **CI e CD** são muito comuns no processo de testes e e
 
 * **CD – Entrega Contínua**– após a aplicação testada temos que colocá-la em produção facilmente. Há diversas técnicas e ferramentas para fazermos isso. Algumas que realizam o processo de forma totalmente automatizada e outras que intervenção humana é necessária por razões de segurança.
 
-### Desvantagens em utilizar Microsserviços
+#### Desvantagens em utilizar Microsserviços
 É preciso esclarecer que não devemos aplicar microsserviços em todos os casos. 
 
 Lembre-se dessas características:
@@ -264,13 +264,13 @@ Lembre-se dessas características:
 
 Além disso, é necessário ter um sistema de alerta. Sempre que houver uma falha, o time que cuida do microsserviço com problema tem que ser comunicado, imediatamente, assim como as pessoas que estão em volta daquele microsserviço, para verificarem se os fallbacks criados estão funcionando para que esse problema não seja escalado para os outros microsserviços.
 
-### Quebrar a Aplicação em Microsserviços
+#### Quebrar a Aplicação em Microsserviços
 Não é recomendado quebrar a aplicação pensando em processos meramente técnicos. Pense em produto. Nesse caso, o **DDD – Domain Driven Design,** se aplica muito bem, pois ele trabalha com um conceito muito importante que são os **escopos muito bem definidos**, os **Bounded Contexts**.
 
 Quando temos os **escopos de domínio, bem definidos**, podemos pegar um desses **escopos** e transformá-lo em **serviços**. Uma vez que transformamos em serviços, será necessário migrar os dados que esse serviço utiliza para um banco de dados próprio.
 Uma vez que temos esse serviço, expomos suas APIs para que o sistema monolítico consiga iniciar o processo de consumo.
 
-### Conclusão
+#### Conclusão
 Trabalhar com microsserviços é muito útil em um contexto que escalar de forma rápida e precisa seja necessário. Microsserviços nos dão independência, disponibilidade distribuída, controle descentralizado e um risco menor para todo sistema. 
 
 Por outro lado, nem tudo são flores. Processos básicos de comunicação e outros procedimentos que são extremamente simples que realizamos no dia a dia com sistema monolíticos podem ser altamente complexos no mundo dos microsserviços. 
@@ -282,17 +282,19 @@ Dessa forma, a adoção dessa arquitetura não deve ser realizada simplesmente p
 
 - [x] 4. Distribuição de responsabilidades
 
-### Distribuição de responsabilidades
+#### Distribuição de responsabilidades
 
 <img src="https://i.imgur.com/1LqD9wY.png" raw="true" alt="imagem" width="800px" />
 
-Pensar no Desenvolvimento do Software na distribuição de responsabilidades (delegação das responsabilidades) das App (Aplicações). Sua App servindo somente como Aplicação.
+* Desenvolvimento do Software:
+* Distribuição de responsabilidades (delegação das responsabilidades) das App (Aplicações). 
+* O(s) App(s) servindo somente como Aplicação.
 
 <img src="https://i.imgur.com/9ZpDcoa.png" raw="true" alt="imagem" width="800px" />
 
-Responsabilidades separadas, criadas e removidas a qualquer momento. Utilizar aplicações distribuidas, ou seja, esse tipo de aplicação é monolítica.
-
-Más é possível trabalhar com Aplicações Monolítica com Escala Horizontal. Utilizar num formato Horizontal.
+* Responsabilidades separadas, criadas e removidas a qualquer momento. 
+* Utilizar aplicações distribuidas, ou seja, mesmo assim, esse tipo de aplicação é monolítica.
+* Más é possível trabalhar com Aplicações Monolítica com Escala Horizontal. 
 
 #### Escala Horizontal - Aplicação Monolítica
 
@@ -303,8 +305,10 @@ Más é possível trabalhar com Aplicações Monolítica com Escala Horizontal. 
 * Ter sua responsabilidades, incluídos assets, etc.
 * Sim, aplicações monolíticas podem ser totalmente escaláveis
 
-## ATENÇÃO (Alguns pontos para analisar)
-### Quando as Aplicações Monolítica podem parar de valer a pena?
+
+### ATENÇÃO
+
+#### Quando as Aplicações Monolítica podem parar de valer a pena?
 
 * Times grandes
 * Necessidade de escalar todo sistema pelo fato de uma área em específico esteja com pico de utilização
@@ -313,7 +317,32 @@ Más é possível trabalhar com Aplicações Monolítica com Escala Horizontal. 
 * Necessidade de utilizar tecnologias diferentes
 
 
-- [ ] 5. Introdução aos microsserviços
+- [x] 5. Introdução aos microsserviços
+
+#### O que é um Serviço?
+* Disponibiliza a informação
+* Realiza transações
+* Resolve problemas de negócio, independe da tecnologia ou protocolo que está sendo utilizado
+* Também pode estabelecer comunicação com diversos "clientes".
+
+#### SOA: Arquitetura Orientada a Serviços
+
+<img src="https://i.imgur.com/wOcFz5S.png" raw="true" alt="imagem" width="800px" />
+
+#### Arquitetura baseada em Microserviços
+
+<img src="https://i.imgur.com/5DWQeoa.png" raw="true" alt="imagem" width="800px" />
+
+#### Microserviços não são para todas as situações
+* Microserviços não são moda, mas sim necessidade.
+
+<img src="https://i.imgur.com/LRlWOYQ.png" raw="true" alt="imagem" width="800px" />
+
+<img src="https://i.imgur.com/GHoMQQe.png" raw="true" alt="imagem" width="900px" />
+
+
+
+
 - [ ] 6. Orientação a negócios
 - [ ] 7. Outras características
 - [ ] 8. API Gateway
